@@ -1,0 +1,29 @@
+<div id="${tableId}" style="padding: 6px;">
+</div>
+<script type="text/javascript">
+	$ready(function() {
+		var tbl = $Actions["TP_ComponentTable"];
+		var tTable = $("${tableId}");
+
+		tbl.jsLoadedCallback = function() {
+			var bar = tbl.json["bar"];
+			if (bar) {
+				var tb = tTable.previous(".bar");
+				if (tb)
+					tb.update(bar);
+			}
+		};
+
+		tbl.doAct = function(act, idKey) {
+			var arr = tbl.checkArr(tTable);
+			if (arr.length == 0) {
+				alert("#(CategoryTableLCTemplatePage.0)");
+				return;
+			}
+			$Actions[act]((idKey || "id") + "=" + arr.inject([], function(r, o) {
+				r.push(tbl.rowId(o));
+				return r;
+			}).join(";"));
+		};
+	});
+</script>

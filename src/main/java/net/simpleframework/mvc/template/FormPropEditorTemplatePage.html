@@ -1,0 +1,14 @@
+<div class="FormPropEditorTemplatePage simple_window_tcb">
+  <div class="c">
+    <form id="${page.propEditorId()}"></form>
+  </div>
+  <div class="b">${page.toButtonsString(parameter)}</div>
+</div>
+<script type="text/javascript">
+	(function() {
+		var editor = $("${page.formId()}");
+		if (editor) {
+			editor.up().setStyle("padding: 0px;");
+		}
+	})();
+</script>

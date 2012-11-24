@@ -1,0 +1,92 @@
+<div class="FormTemplatePage" id="${formId = page.formId()}">
+  ${form}
+</div>
+<script type="text/javascript">
+	(function(o) {
+		if (!o)
+			return;
+
+		var CLASS_TEXT_BUTTON = "text_button";
+		var CLASS_MULTI_SELECT = "multi_select";
+		
+		var HIDDEN_FIELD = "hidden_field";
+		
+		var DICT_PARAMETER = "dict_parameter";
+		var DICT_COMPONENT = "dict_component";
+
+		var CALENDAR_COMPONENT = "calendar_component";
+		var DATE_FORMAT = "date_format";
+
+		function replace(input, click) {
+			var tb = $UI.createButtonInputField(input.identify(), click);
+			tb.textInput.readOnly = input.readOnly;
+			input.replace(tb);
+			return tb;
+		}
+
+		function nInput(input, click) {
+			return input.hasClassName(CLASS_TEXT_BUTTON) ? replace(input, click).textInput
+					: input.observe("click", click);
+		}
+
+		// 插入隐藏域
+		o.select("input[" + HIDDEN_FIELD + "]").each(function(c) {
+			var hId = c.getAttribute(HIDDEN_FIELD);
+			c.insert({
+				after : new Element("input", {
+					"type" : "hidden",
+					"id" : hId,
+					"name" : hId
+				})
+			});
+		});
+		
+		// 日历
+		o.select("input[" + CALENDAR_COMPONENT + "]").each(function(c) {
+			var act = $Actions[c.getAttribute(CALENDAR_COMPONENT)];
+			if (act) {
+				var txt;
+				var click = function(ev) {
+					act.show(txt, c.getAttribute(DATE_FORMAT));
+				};
+				txt = nInput(c, click);
+			}
+		});
+	
+		// 字典输入框
+		o.select("input[" + DICT_COMPONENT + "]").each(function(c) {
+			var act = $Actions[c.getAttribute(DICT_COMPONENT)];
+			if (act) {
+				if (c.hasClassName(CLASS_MULTI_SELECT)) {
+					// 多选
+					var f = $UI.createMultiSelectInputField(c.id, function(r, ev) {
+						act.jsSelectCallback = function(selects) {
+							for (var i = 0; i < selects.length; i++)
+								r.insertItem(selects[i].id, selects[i].text);	
+							return true;
+						};
+						act(c.getAttribute(DICT_PARAMETER));
+					});
+					c.replace(f);
+				} else {
+					var id = c.getAttribute(HIDDEN_FIELD);
+					var txt;
+					var click = function(ev) {
+						act.bindingId = id;
+						act.bindingText = txt;
+						act(c.getAttribute(DICT_PARAMETER));
+					};
+					txt = nInput(c, click);
+				}
+			}
+		});
+
+		// textButton选择框
+		o.select("input." + CLASS_TEXT_BUTTON).each(function(c) {
+			replace(c, function(ev) {
+				eval(c.getAttribute("onclick"));
+			});
+		});
+
+	})($("${formId}"));
+</script>

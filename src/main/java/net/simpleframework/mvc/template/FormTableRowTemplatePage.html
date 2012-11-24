@@ -1,0 +1,12 @@
+<div class="FormTableRowTemplatePage">
+  <form>${page.toTableRowsString(parameter)}</form>
+  <div class="btn">
+    <div class="opt">${page.toOptString(parameter)}</div>
+    <div class="r">${page.toButtonsString(parameter)}</div>
+  </div>
+</div>
+<style type="text/css">
+.FormTableRowTemplatePage .form_tbl .l {
+  width: ${page.labelWidth(parameter)}px;
+}
+</style>

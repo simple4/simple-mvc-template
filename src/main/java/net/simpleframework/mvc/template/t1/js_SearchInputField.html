@@ -1,0 +1,13 @@
+<script type="text/javascript">
+	(function(d) {
+		d.appendChild($UI.createSearchInputField(function(sp, ev) {
+			var onsearchclick = d.getAttribute("onsearchclick");
+			if (onsearchclick)
+				eval(onsearchclick);
+		}, function(sp, ev) {
+			var onadvclick = d.getAttribute("onadvclick");
+			if (onadvclick)
+				eval(onadvclick);
+		}, null, d.getAttribute("inputwidth")));
+	})($("${id}"));
+</script>

@@ -1,0 +1,7 @@
+<div class="OkCancelDialogPage simple_window_tcb">
+  $if{StringUtils.hasText(title = page.title(parameter))}
+  <div class="t">${title}</div>
+  $end{}
+  <form>${ok_cancel_form}</form>
+  <div class="b">${page.toButtonsString(parameter)}</div>
+</div>

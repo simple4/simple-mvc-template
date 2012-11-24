@@ -1,0 +1,72 @@
+
+.err404 {
+	border: 1px solid #ccc;
+	width: 500px;
+	margin-top: 100px;
+	padding-bottom: 10px;
+}
+
+.err404 .img {
+	background: url("images/404.jpg") 0 0 no-repeat;
+	height: 270px;
+	border-bottom: 1px solid #ccc;
+}
+
+.err404 .txt {
+	font-size: 9.5pt;
+	padding: 8px;
+	text-align: left;
+}
+
+.FormTemplatePage .multi_dselect {
+	border: 0;
+}
+
+.FormTemplatePage .text_button {
+	width: 100% !important;
+}
+
+.FormPropEditorTemplatePage .formeditor {
+	border: 0 !important;
+	border-bottom: 1px solid #bbb !important;
+	-moz-border-radius: 0 !important;
+	-webkit-border-radius: 0 !important;
+	border-radius: 0 !important;
+}
+
+.FormPropEditorTemplatePage .c {
+	padding: 0 !important;
+}
+
+.FormTableRowTemplatePage {
+	padding: 3px 2px 2px 2px;
+}
+
+.FormTableRowTemplatePage .btn {
+	background: #fcfcfc;
+	border: 1px solid #ccc;
+	border-top: 0;
+	text-align: right;
+	padding: 8px;
+	overflow: hidden;
+}
+
+.FormTableRowTemplatePage .btn .opt {
+	float: left;
+	line-height: 24px;
+}
+
+.FormTableRowTemplatePage .btn .opt input,
+.FormTableRowTemplatePage .btn .opt label {
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.FormTableRowTemplatePage .btn .r {
+	text-align: right;
+	float: right;
+}
+
+.FormTableRowTemplatePage .form_tbl {
+	margin-top: -1px !important;
+}

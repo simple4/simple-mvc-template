@@ -1,0 +1,84 @@
+body {
+	background: url("images/page-background.png") 0 0 repeat-x;
+	margin: 0;
+	padding: 0;
+}
+
+#site_body {
+	-webkit-box-shadow: 5px 5px 5px #aaa;
+	-moz-box-shadow: 5px 5px 5px #aaa;
+	box-shadow: 5px 5px 5px #aaa;
+	width: 1080px;
+	background: #fff;
+	text-align: left;
+	border: 1px solid #aaa;
+  margin: 8px 0 20px;
+}
+
+#site_header {
+	height: 80px; 
+}
+
+#site_header2 {
+	border-top: 6px solid #666;
+	border-bottom: 1px solid #aaa;
+	overflow: hidden;
+	_zoom: 1;
+	padding: 3px 0;
+	background: #f4f4f4;
+}
+
+#site_header2 .info {
+	float: left;
+	margin-left: 8px;
+	line-height: 21px;
+}
+
+#site_menu_bar {
+	float: right;
+	margin-right: 30px;
+}
+
+#site_content {
+	min-height: 600px;
+}
+
+#site_footer {
+	min-height: 60px; 
+	padding: 4px;
+	border-top: 3px double #aaa;
+}
+
+.RightPageletTemplatePage {
+	overflow: hidden;
+	_zoom: 1;
+	padding: 8px;
+}
+
+.RightPageletTemplatePage .col1 {
+	float: left;
+	width: 760px;
+}
+
+.RightPageletTemplatePage .col2 {
+	float: right;
+	width: 295px;
+}
+
+.RightPageletTemplatePage .let {
+	border: 1px solid #ccc;
+	background: #f9f9f9;
+	padding: 8px;
+	margin-bottom: 8px;
+	min-height: 200px;
+}
+
+.RightPageletTemplatePage .let .lh {
+	padding-bottom: 4px;
+	margin-bottom: 4px;
+	color: #400;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 21px;
+	border-bottom: 3px double #aaa;
+}

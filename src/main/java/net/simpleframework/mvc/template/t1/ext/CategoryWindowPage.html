@@ -1,0 +1,26 @@
+<div class="CategoryWindowPage">
+  <div class="t">${page.toTopicString(parameter)}</div>
+  <div id="${categoryId}" class="c"></div>
+  <div class="b">
+    <a class="simple_btn simple_btn_all" onclick="$win(this).close();">#(Button.Close)</a>
+  </div>
+</div>
+<script type="text/javascript">
+	$ready(function() {
+		var c = $("${categoryId}");
+		c.up(".CategoryWindowPage").up().setStyle("padding: 0;");
+
+		var t = c.previous();
+		var b = c.next();
+		var w = $win(c);
+		w.content.setStyle("overflow:hidden;");
+
+		var s = function() {
+			c.setStyle('height: '
+					+ (w.getSize(true).height - t.getHeight() - b.getHeight() - 8)
+					+ 'px;');
+		};
+		s();
+		w.observe("resize:ended", s);
+	});
+</script>

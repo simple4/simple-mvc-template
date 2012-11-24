@@ -1,0 +1,242 @@
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+#resized_header {
+	position: relative;
+	background: url('images/header_bg.png') repeat-x 0 0;
+	height: 71px;
+	border-bottom: 1px solid #bbb;
+}
+
+#resized_menu {
+	position: relative;
+	height: 25px;
+	background: url('images/menu_bg.png') repeat-x 0 0;
+	border-bottom: 1px solid #aaa;
+}
+
+#resized_navigation_bar {
+	position: absolute;
+	left: 8px;
+	top: 0;
+}
+
+#resized_navigation_bar .nav_img {
+	display: block;
+	background: url('images/nav.png') no-repeat 0 0;
+	float: left;
+	height: 25px;
+	margin: 0 6px;
+	width: 10px;
+}
+
+#resized_navigation_bar .nav_item {
+	display: block;
+	float: left;
+	height: 25px;
+	line-height: 25px;
+	line-height: 27px\0; /* ie8+ */
+}
+
+:root
+#resized_navigation_bar .nav_item {
+	line-height: 25px\9\0; /* ie9 */
+}
+
+#resized_menu_bar {
+	display: inline-block;
+	position: absolute;
+	right: 80px;
+	top: 2px;
+}
+
+.tb_class {
+	background: url("images/tabs_bg.png") repeat-x 0 0;
+	border-bottom: 1px solid #ddd;
+	height: 29px;
+	text-align: left;
+	position: relative;
+}
+
+.center_c .tb_class {
+	background-image: none !important;
+	margin: -5px -5px 6px;
+}
+
+.tb_class .tab {
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 3px 20px 0 10px;
+}
+
+#resized_footer {
+	border-top: 1px solid #bbb;
+	background: url('images/footer_bg.png') repeat-x 0 0;
+	height: 24px;
+	bottom: 0;
+	width: 100%;
+	position: absolute;
+}
+
+#resized_body {
+	background: url('images/body_bg.png') repeat-x 0 0 #fff;
+}
+
+#resized_body .child {
+	overflow: auto;
+	position: relative;
+}
+
+#resized_body .left_c,
+#resized_body .center_c {
+	vertical-align: top;
+	text-align: left;
+}
+
+#resized_body .left_c {
+	width: 280px;
+	max-width: 1000px;
+	min-width: 100px;
+}
+
+#resized_body .left_c>div,
+#resized_body .center_c>div {
+	overflow: auto;
+	position: relative;
+}
+
+#resized_body .center_c>div>div.tb_class {
+	padding: 0px;
+}
+
+#resized_body .splitbar {
+	width: 5px;
+	background: url("images/bg_splitbar.png") repeat scroll 0 0 transparent;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	cursor: e-resize;
+}
+
+#fixed_body {
+	background: url('images/body_bg.png') repeat-x 0 0;
+}
+
+#fixed_content {
+	padding: 8px;
+	min-height: 600px;
+	width: 1024px;
+}
+
+#fixed_footer {
+	background: #fbfbfb;
+	border-top: 1px solid #ccc;
+	margin: 0;
+}
+
+.child .simple_tabs_content {
+  border: 0;
+  border-top: 1px solid #ddd;
+  background-image: none;
+  background-color: transparent;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  text-align: left;
+}
+
+.child .tabs {
+  text-align: right;
+}
+
+.child .simple_tabs {
+  margin-right: 20px;
+  margin-top: 4px;
+}
+
+.child .t_bar {
+	background: url("images/tb_bg.png") repeat-x 0 0;
+	border-bottom: 1px solid #ccc;
+	height: 26px;
+	line-height: 24px;
+	padding: 6px 10px;
+	text-align: left;
+}
+
+.child .t_bar .btns {
+	float: left;
+}
+
+.child .f_bar {
+	background: #fff;
+	border-bottom: 1px solid #ccc;
+	padding: 3px 10px;
+	text-align: left;
+}
+
+.child .f_bar .item {
+	background: #ffc;
+	border: 1px solid #999;
+	padding: 2px 34px 2px 12px;
+	margin: 3px 0;
+  position: relative;
+  display: inline-block;
+  height: 16px;
+  line-height: 16px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.child .f_bar .item:hover {
+	border-color: #666;
+	background: #ffd;
+}
+
+.child .f_bar .item .del {
+	background: url("images/trash.gif") no-repeat 3px 2px #fff;
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 20px;
+	width: 22px;
+	border-left: 1px solid #999;
+	cursor: pointer;
+	-moz-border-radius: 0 6px 6px 0;
+  -webkit-border-radius: 0 6px 6px 0;
+  border-radius: 0 6px 6px 0;
+}
+
+#idTabsTemplatePage .simple_tabs_content {
+  margin: 0 -6px;
+}
+
+#idTabsTemplatePage .simple_tabs {
+  margin-top: -2px;
+}
+
+.CategoryWindowPage .t {
+	padding: 6px 8px;
+	border-bottom: 1px solid #aaa;
+	background: #f9f9f9;
+	font-size: 9.5pt;
+}
+
+.CategoryWindowPage .c {
+	padding: 4px 2px;
+	overflow-y: auto;
+}
+
+.CategoryWindowPage .b {
+	text-align: right;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border-top: 1px solid #aaa;
+	background: #fcfcfc;
+	padding: 6px 8px;
+}
